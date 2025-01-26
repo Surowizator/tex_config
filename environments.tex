@@ -1,0 +1,134 @@
+\lstdefinestyle{cppstyle}{ 
+    language=C++, 
+    basicstyle=\ttfamily\small,  % Use a monospaced font 
+    keywordstyle=\color{blue},    % Keywords in blue 
+    commentstyle=\color{green!50!black},    % Comments in green 
+    stringstyle=\color{red},      % Strings in red 
+    numbers=left,                 % Line numbers on the left 
+    numberstyle=\tiny\color{gray}, % Style for line numbers 
+    stepnumber=1,                 % Number every line 
+    numbersep=5pt,                % Distance between line numbers and code 
+    frame=single,                 % Frame around the code 
+    backgroundcolor=\color{black!5}, % Background color 
+    showstringspaces=false,       % Don't show spaces in strings 
+    tabsize=2                     % Tab size 
+}
+\lstdefinestyle{pythonstyle}{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    morekeywords={self},              % Add keywords here
+    keywordstyle=\color{Blue},
+    stringstyle=\color{Green},
+    numbers=left,                 % Line numbers on the left 
+    numberstyle=\tiny\color{gray}, % Style for line numbers 
+    stepnumber=1,                 % Number every line 
+    numbersep=5pt,                % Distance between line numbers and code 
+    frame=single,                 % Frame around the code 
+    backgroundcolor=\color{black!5}, % Background color 
+    showstringspaces=false,       % Don't show spaces in strings 
+    tabsize=2,                     % Tab size 
+    commentstyle=\ttfamily\color{Mulberry},
+    breaklines=true,
+    breakatwhitespace=true
+}
+\lstset{
+literate=%
+{ą}{{\k{a}}}1
+{Ą}{{\k{A}}}1
+{ć}{{\'c}}1
+{Ć}{{\'{C}}}1
+{ę}{{\k{e}}}1
+{Ę}{{\k{E}}}1
+{ł}{{\l{}}}1
+{Ł}{{\L{}}}1
+{ń}{{\'n}}1
+{Ń}{{\'N}}1
+{ó}{{\'o}}1
+{Ó}{{\'O}}1
+{ś}{{\'s}}1
+{Ś}{{\'S}}1
+{ż}{{\.z}}1
+{Ż}{{\.Z}}1
+{ź}{{\'z}}1
+{Ź}{{\'Z}}1
+}
+
+
+\mdfsetup{skipabove=1em,skipbelow=0em}
+
+\theoremstyle{definition}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{ForestGreen!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=ForestGreen, backgroundcolor=ForestGreen!5,
+    }
+]{thmgreenbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!5,
+    }
+]{thmbluebox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue
+    }
+]{thmblueline}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!5,
+    }
+]{thmredbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{RawSienna!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=RawSienna, backgroundcolor=RawSienna!1,
+    },
+    qed=\qedsymbol
+]{thmproofbox}
+
+\declaretheoremstyle[
+    headfont=\bfseries\sffamily\color{NavyBlue!70!black}, bodyfont=\normalfont,
+    numbered=no,
+    mdframed={
+        linewidth=2pt,
+        rightline=false, topline=false, bottomline=false,
+        linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
+    },
+]{thmexplanationbox}
+
+\declaretheorem[style=thmgreenbox, name=Definicja]{definition}
+\declaretheorem[style=thmbluebox, numbered=no, name=Przykład]{eg}
+\declaretheorem[style=thmbluebox, numbered=no, name=Pomysł]{idea}
+\declaretheorem[style=thmredbox, name=Propozycja]{prop}
+\declaretheorem[style=thmredbox, name=Twierdzenie]{theorem}
+\declaretheorem[style=thmredbox, name=Algorytm]{{algorithm}}
+\declaretheorem[style=thmredbox, name=Lemat]{lemma}
+\declaretheorem[style=thmredbox, numbered=no, name=Wniosek]{corollary}
+\declaretheorem[style=thmblueline, numbered=no, name=Uwaga]{remark}
+\declaretheorem[style=thmblueline, numbered=no, name=Notacja]{notation}
+\declaretheorem[style=thmproofbox, name=Dowód]{replacementproof}
+\declaretheorem[style=thmexplanationbox, name=Dowód]{tmpexplanation}
+\declaretheorem[style=thmblueline, name=Zadanie]{task}
+
+\renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
+\newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
+

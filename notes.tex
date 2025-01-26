@@ -1,0 +1,51 @@
+\newcommand{\incfig}[2]{
+    \ifthenelse{\isempty{#2}}{
+        \def\svgwidth{0.7\columnwidth}
+    }{
+        \def\svgwidth{#2\columnwidth}
+    }
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\makeatletter
+\def\@lecture{}%
+\newcommand{\lecture}[3]{
+    \ifthenelse{\isempty{#3}}{%
+        \def\@lecture{#1.}%
+    }{%
+        \def\@lecture{#1. #3}%
+    }%
+    \section*{\@lecture}
+    \addcontentsline{toc}{section}{\@lecture}
+    \marginpar{\small\textsf{\mbox{#2}}}
+    \medskip
+}
+\makeatother
+
+
+\newcommand{\notestitle}[2]{
+    \begin{titlepage}
+        \begin{center}
+            \Huge\textbf{\textsc{\MyTitle}}
+
+            \vspace{0.5cm}
+            \Large\textsc{Notatki}
+
+            \line(1,0){400}
+
+            \vspace{1cm}
+            \ifthenelse{\isempty{#1}}{
+                \textit{,,Modulo to, że mogę się zupełnie mylić, to działa to jakoś tak.''}
+            }{
+                \textit{,,#1''}
+            }
+
+            \vfill
+            \large
+            \textbf{\textsc{\MyAuthor}}\\
+            Kraków, #2
+        \end{center}
+    \end{titlepage}
+    \tableofcontents
+    \newpage
+}
