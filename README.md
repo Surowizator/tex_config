@@ -2,7 +2,7 @@ This is a LaTeX preamble I use in my projects. It is organised as a LaTeX packag
 
 ## Usage
 
-After adding this repository's root to the `TEXMF` variable or setting it as `TEXMFHOME` (for example by adding `export TEXMFHOME=/this/repository` to `.bashrc` and running `mktexlsr`) the preamble can be used by simply importing a package: `\usepackage[options]{preamble}`.
+After adding this repository's root to the `TEXMF` variable or setting it as `TEXMFHOME` (for example by adding `export TEXMFHOME=/this/repository` to `.bashrc` and running `mktexlsr`) the preamble can be used by simply importing a package. Currently there are two preambles: `pres_preamble` is meant to be used in beamer presentations and `preamble` is the general-purpose one.
 
-Available options:
+Options available for `preamble`:
 - `notes`: loads commands and settings I use for note-taking.
