@@ -1,4 +1,4 @@
-This is a LaTeX preamble I use in my projects. It is organised as a LaTeX package (the `preamble` package), hence the file structure.
+This is the LaTeX preamble I use in my projects. It is organised as a LaTeX package, hence the file structure.
 
 ## Usage
 
