@@ -1,3 +1,5 @@
+\ProvidesPackage{common}
+
 \newcommand\N{\ensuremath{\mathbb{N}}}
 \newcommand\R{\ensuremath{\mathbb{R}}}
 \newcommand\Z{\ensuremath{\mathbb{Z}}}
@@ -10,13 +12,10 @@
 \newcommand{\pd}[2]{\frac{\partial{#1}}{\partial{#2}}}
 \newcommand{\eval}[1]{\left. #1 \right\rvert}
 
-\DeclareMathOperator{\ins}{int}
-
-
+\RequirePackage{stmaryrd} % for \lightning
 % Add \contra symbol to denote contradiction
 \newcommand\contra{\scalebox{1.5}{$\lightning$}}
 
 % Stirling numbers
 \newcommand{\cstir}[2]{\genfrac{\{}{\}}{0pt}{}{#1}{#2}}
 \newcommand{\bstir}[2]{\genfrac{[}{]}{0pt}{}{#1}{#2}}
-
