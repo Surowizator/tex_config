@@ -1,0 +1,25 @@
+\newcommand{\incfig}[2]{
+    \ifthenelse{\isempty{#2}}{
+        \def\svgwidth{0.5\columnwidth}
+    }{
+        \def\svgwidth{#2\columnwidth}
+    }
+    \import{./figures/}{#1.pdf_tex}
+}
+
+\RequirePackage{fontawesome}
+
+\newcommand\urlref[2]{%
+    {
+        \hypersetup{hidelinks}
+        \href{#1}{\raisebox{0.15ex}{\scriptsize \faLink}\:\textup{\textbf{#2}}}%
+    }
+}
+
+\newcommand\pdfref[3]{%
+    {
+        \hypersetup{hidelinks}
+        \href{phd://open-paper?id=#1&page=#2}{%
+        \textup{[\textbf{\ifthenelse{\isempty{#3}}{here}{#3}}]}}%
+    }
+}
