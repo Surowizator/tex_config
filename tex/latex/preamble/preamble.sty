@@ -1,12 +1,24 @@
 \ProvidesPackage{preamble}
 
+\RequirePackage{kvoptions}
+\RequirePackage{etoolbox}
+\SetupKeyvalOptions{
+  family=preamble,
+  prefix=preamble@
+}
+\DeclareStringOption[polish]{language}
+\DeclareBoolOption[false]{notes}
+\ProcessKeyvalOptions*
+
+\input{languages.tex}
 \input{packages.tex}
 \input{environments.tex}
 \input{looks.tex}
 \input{referencing.tex}
 
-\DeclareOption{notes}{\input{notes.tex}}
-\ProcessOptions\relax
+\ifpreamble@notes
+    \input{notes.tex}
+\fi
 
 
 \RequirePackage{common}

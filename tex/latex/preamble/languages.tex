@@ -1,0 +1,42 @@
+\RequirePackage[\preamble@language]{babel}
+\ifstrequal{\preamble@language}{polish}
+{
+    \AtBeginDocument{\shorthandoff{"}} % Allow the use of " in tikz environments
+}
+{
+}
+
+\newcommand{\preamble@definition}{Definicja}
+\newcommand{\preamble@idea}{Pomysł}
+\newcommand{\preamble@eg}{Przykład}
+\newcommand{\preamble@prop}{Propozycja}
+\newcommand{\preamble@thm}{Twierdzenie}
+\newcommand{\preamble@algo}{Algorytm}
+\newcommand{\preamble@lemma}{Lemat}
+\newcommand{\preamble@cor}{Wniosek}
+\newcommand{\preamble@remark}{Uwaga}
+\newcommand{\preamble@notation}{Notacja}
+\newcommand{\preamble@task}{Zadanie}
+\newcommand{\preamble@proof}{Dowód}
+
+\addto\captionsenglish{
+    \def\preamble@page{Page}
+    \def\preamble@title{Title}
+    \renewcommand{\preamble@definition}{Definition}
+    \renewcommand{\preamble@idea}{Idea}
+    \renewcommand{\preamble@eg}{Example}
+    \renewcommand{\preamble@prop}{Proposition}
+    \renewcommand{\preamble@thm}{Theorem}
+    \renewcommand{\preamble@algo}{Algorithm}
+    \renewcommand{\preamble@lemma}{Lemma}
+    \renewcommand{\preamble@cor}{Corollary}
+    \renewcommand{\preamble@remark}{Remark}
+    \renewcommand{\preamble@notation}{Notation}
+    \renewcommand{\preamble@task}{Task}
+    \renewcommand{\preamble@proof}{Proof}
+}
+
+\addto\captionspolish{
+    \def\preamble@page{Strona}
+    \def\preamble@title{Tytuł}
+}

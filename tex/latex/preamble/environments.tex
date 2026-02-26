@@ -115,19 +115,19 @@ literate=%
     },
 ]{thmexplanationbox}
 
-\declaretheorem[style=thmgreenbox, name=Definicja]{definition}
-\declaretheorem[style=thmbluebox, numbered=no, name=Przykład]{eg}
-\declaretheorem[style=thmbluebox, numbered=no, name=Pomysł]{idea}
-\declaretheorem[style=thmredbox, name=Propozycja]{prop}
-\declaretheorem[style=thmredbox, name=Twierdzenie]{theorem}
-\declaretheorem[style=thmredbox, name=Algorytm]{{algorithm}}
-\declaretheorem[style=thmredbox, name=Lemat]{lemma}
-\declaretheorem[style=thmredbox, numbered=no, name=Wniosek]{corollary}
-\declaretheorem[style=thmblueline, numbered=no, name=Uwaga]{remark}
-\declaretheorem[style=thmblueline, numbered=no, name=Notacja]{notation}
-\declaretheorem[style=thmproofbox, name=Dowód]{replacementproof}
-\declaretheorem[style=thmexplanationbox, name=Dowód]{tmpexplanation}
-\declaretheorem[style=thmblueline, name=Zadanie]{task}
+\declaretheorem[style=thmgreenbox, name=\protect\preamble@definition]{definition}
+\declaretheorem[style=thmbluebox, numbered=no, name=\protect\preamble@eg]{eg}
+\declaretheorem[style=thmbluebox, numbered=no, name=\protect\preamble@idea]{idea}
+\declaretheorem[style=thmredbox, name=\protect\preamble@prop]{prop}
+\declaretheorem[style=thmredbox, name=\protect\preamble@thm]{theorem}
+\declaretheorem[style=thmredbox, name=\protect\preamble@algo]{{algorithm}}
+\declaretheorem[style=thmredbox, name=\protect\preamble@lemma]{lemma}
+\declaretheorem[style=thmredbox, numbered=no, name=\protect\preamble@cor]{corollary}
+\declaretheorem[style=thmblueline, numbered=no, name=\protect\preamble@remark]{remark}
+\declaretheorem[style=thmblueline, numbered=no, name=\protect\preamble@notation]{notation}
+\declaretheorem[style=thmproofbox, name=\protect\preamble@proof]{replacementproof}
+\declaretheorem[style=thmexplanationbox, name=\protect\preamble@proof]{tmpexplanation}
+\declaretheorem[style=thmblueline, name=\protect\preamble@task]{task}
 
 \renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
 \newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
