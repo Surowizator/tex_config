@@ -113,6 +113,7 @@ literate=%
         rightline=false, topline=false, bottomline=false,
         linecolor=NavyBlue, backgroundcolor=NavyBlue!1,
     },
+    qed=\qedsymbol
 ]{thmexplanationbox}
 
 \declaretheorem[style=thmgreenbox, name=\protect\preamble@definition]{definition}
@@ -127,8 +128,27 @@ literate=%
 \declaretheorem[style=thmblueline, numbered=no, name=\protect\preamble@notation]{notation}
 \declaretheorem[style=thmproofbox, name=\protect\preamble@proof]{replacementproof}
 \declaretheorem[style=thmexplanationbox, name=\protect\preamble@proof]{tmpexplanation}
-\declaretheorem[style=thmblueline, name=\protect\preamble@task]{task}
+\declaretheorem[style=thmbluebox, name=\protect\preamble@task]{task}
 
-\renewenvironment{proof}[1][\proofname]{\vspace{-10pt}\begin{replacementproof}}{\end{replacementproof}}
-\newenvironment{explanation}[1][]{\vspace{-10pt}\begin{tmpexplanation}}{\end{tmpexplanation}}
+\renewenvironment{proof}[1][]{%
+  \vspace{-10pt}
+  \if\relax\detokenize{#1}\relax
+    \begin{replacementproof}
+  \else
+    \begin{replacementproof}[#1]
+  \fi
+}{%
+  \end{replacementproof}
+}
+
+\newenvironment{explanation}[1][]{%
+  \vspace{-10pt}
+  \if\relax\detokenize{#1}\relax
+    \begin{tmpexplanation}
+  \else
+    \begin{tmpexplanation}[#1]
+  \fi
+}{%
+  \end{tmpexplanation}
+}
 
